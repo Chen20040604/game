@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://2insk3s2ufv6"]
+[gd_scene load_steps=24 format=3 uid="uid://2insk3s2ufv6"]
 
 [ext_resource type="Texture2D" uid="uid://bqei4hcbomkpn" path="res://assets/TX Plant.png" id="1_27cxh"]
 [ext_resource type="Script" path="res://sence/test.gd" id="1_g01fk"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cj4osknb25q5l" path="res://assets/TX Tileset Wall.png" id="4_qgg2e"]
 [ext_resource type="Texture2D" uid="uid://53b7icpiqly5" path="res://assets/TX Props.png" id="5_1cdnx"]
 [ext_resource type="Texture2D" uid="uid://cak5mjflpj1jc" path="res://assets/TX Struct.png" id="6_6as6p"]
+[ext_resource type="PackedScene" uid="uid://dag5f51i6rxnl" path="res://player.tscn" id="8_62evk"]
 
 [sub_resource type="Gradient" id="Gradient_xejng"]
 interpolation_mode = 1
@@ -1261,4 +1262,6 @@ tile_set = SubResource("TileSet_iftfk")
 [node name="struct" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_ku7p5")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="player" parent="." instance=ExtResource("8_62evk")]
+
+[node name="Camera2D" type="Camera2D" parent="player"]

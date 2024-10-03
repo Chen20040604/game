@@ -5,9 +5,10 @@ extends Node2D
 @onready var props: TileMapLayer = $props
 @onready var struct: TileMapLayer = $struct
 @onready var plant: TileMapLayer = $plant
+@onready var camera_2d: Camera2D = $player/Camera2D
 
 @export var noise_textrue : NoiseTexture2D
-@onready var camera_2d: Camera2D = $Camera2D
+
 
 
 
@@ -15,7 +16,7 @@ extends Node2D
 @export var height : int = 100
 var noise : Noise
 var noise_val_arr = []
-var grass_arr = []	`WE3R`31
+var grass_arr = []
 var n_wall_arr = []
 var s_wall_arr = []
 var l_wall_arr = []
